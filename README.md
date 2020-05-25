@@ -29,6 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Video tutorial del test en Youtube
 
+https://www.youtube.com/channel/UCMy6CAQbEd_P96mXjMXOOZA
+
 ## Instalacion
 
 Importamos el archivo hospital.sql en un gestor de base de datos Mysql. La base de datos contiene datos prepopulados para su correcto e imediato uso.
