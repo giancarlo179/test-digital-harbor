@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Video tutorial del test en Youtube
+
+## Instalacion
+
+Importamos el archivo hospital.sql en un gestor de base de datos Mysql. La base de datos contiene datos prepopulados para su correcto e imediato uso.
+
+El archivo Hospital_backup_backend_spring_java.zip contiene todo el proyecto backend en Java Spring Boot. Para utilizarlo solo hay que descomprimir el archivo y ejecutarlo en un IDE de java como Netbeans, Eclipse o en el mejor de los casos el IDE de Spring Boot que se puede descargar de la pagina oficial.
+
+para iniciarl el fontend simplemente ingresamos a la carpeta contenedora del proyecto y ejecutamos el comando ng serve y se inicializa el servidor y podemos utilizar la aplicacion sin ningun problema.
