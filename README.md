@@ -28,7 +28,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Video tutorial del test en Youtube
+https://www.youtube.com/watch?v=Z5osLsdjOcE
 
+## Canal de Youtube
 https://www.youtube.com/channel/UCMy6CAQbEd_P96mXjMXOOZA
 
 ## Instalacion
