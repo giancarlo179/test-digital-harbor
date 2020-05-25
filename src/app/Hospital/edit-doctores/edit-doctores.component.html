@@ -1,0 +1,48 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Actualizar datos de la tabla Doctor</h3>
+    </div>
+    <div class="card-body">
+      <form >
+        <div class="form-group">
+          <label for="">Nombres:</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="doctor.nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="">Apellidos:</label>
+          <input type="text" class="form-control" id="apellidos" [(ngModel)]="doctor.apellidos" name="apellidos" required>
+        </div>
+        <div class="form-group">
+          <label for="">Direccion:</label>
+          <input type="text" class="form-control" id="direccion" [(ngModel)]="doctor.direccion" name="direccion" required>
+        </div>
+        <div class="form-group">
+          <label for="">Foto de Perfil</label>
+          <input type="file" class="form-control-file" id="fotoPerfil" name="fotoPerfil" [(ngModel)]="doctor.fotoPerfil" aria-describedby="fileHelp">
+          <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+        </div>
+        <p id="fechaCreacion" ngDefaultControl  [(ngModel)]="doctor.fechaCreacion" name="fechaCreacion"></p>
+        <div class="form-group">
+          <label for="">Telefono:</label>
+          <input  type="text" class="form-control" id="telefono" [(ngModel)]="doctor.telefono" name="telefono" required>
+        </div>
+        <div class="form-group">
+          <label for="" >Fecha de Nacimiento</label>
+            <input class="form-control" type="date" id="fechaNacimiento" [(ngModel)]="doctor.fechaNacimiento" name="fechaNacimiento" required>
+        </div>
+        <div class="form-group">
+          <label for="">Especialidad:</label>
+          <select class="custom-select" [(ngModel)]="doctor.especialidad" name="especialidad">
+            <option selected>Elija una Especialidad</option>
+            <option value="{{Especialidad.nombre}}"  *ngFor="let Especialidad of especialidad">{{Especialidad.nombre}}</option>
+            <option value="Null">----</option>
+            <option value="Null">Ninguna</option>
+          </select>
+        </div>
+        <button class="btn btn-outline-primary" (click)="actualizar(doctor)">Guardar</button>
+        <button class="btn btn-outline-danger" routerLink="/home">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div><br>

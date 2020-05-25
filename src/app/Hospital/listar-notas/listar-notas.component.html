@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="car">
+    <div class="class-header">
+      <h3 class="font-weight-bold">
+        Notas de Visita
+      </h3>
+    </div>
+    <div class="card-body text-center" >
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Paciente que se Atendio</th>
+            <th>Doctor que Atendio</th>
+            <th>Direccion</th>
+            <th>Fecha de la Visita</th>
+            <th>Fecha de Creacion de la nota</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Notas of notas" class="text-center">
+            <!-- Aqui va los datos del backend -->
+            <td>{{Notas.id}}</td>
+            <td>{{Notas.paciente}}</td>
+            <td>{{Notas.doctor}}</td>
+            <td>{{Notas.descripcion}}</td>
+            <td>{{Notas.fechaVisita}}</td>
+            <td>{{Notas.fechaCreacion}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

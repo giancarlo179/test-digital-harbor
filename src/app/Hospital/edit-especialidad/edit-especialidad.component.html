@@ -1,0 +1,27 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Actualizar datos de la tabla Especialidad</h3>
+    </div>
+    <div class="card-body">
+      <form >
+        <div class="form-group">
+          <label for="">Nombres:</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="especialidad.nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="">Descripcion:</label>
+          <input type="text" class="form-control" id="apellidos" [(ngModel)]="especialidad.descripcion" name="apellidos" required>
+        </div>
+        <div class="form-group">
+          <label for="">Avartar: </label>
+          <input type="file" class="form-control-file" id="fotoPerfil" name="fotoPerfil" [(ngModel)]="especialidad.avatar" aria-describedby="fileHelp">
+          <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+        </div>
+        <p id="fechaCreacion" ngDefaultControl  [(ngModel)]="especialidad.fechaCreacion" name="fechaCreacion"></p>
+        <button class="btn btn-outline-primary" (click)="actualizar(especialidad)">Guardar</button>
+        <button class="btn btn-outline-danger" routerLink="/home">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div><br>

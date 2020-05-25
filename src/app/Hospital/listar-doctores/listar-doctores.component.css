@@ -1,0 +1,17 @@
+.btn-outline-info{
+  margin-left: 70%;
+}
+.btn-outline-danger{
+  margin-left:10px
+}
+.btn-danger{
+  margin-left: 10px;
+}
+.container {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.fotoPerfil{
+  width: 50%;
+}

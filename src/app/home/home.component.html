@@ -1,0 +1,30 @@
+<div class="content" role="main">
+  <div class="row" bis_skin_checked="1">
+    <div class="col-md-6" bis_skin_checked="1">
+      <h3>Lista de Hospitales</h3>
+      <div class="row align-content-center">
+        <div class="col-4 text-center" *ngFor="let Hospitales of hospital">
+          <!-- Aqui va los datos del backend -->
+          <img class="Avatar" src="../../assets/img/AvatarHospital.jpg" alt="Avatar" >
+          <p>{{Hospitales.nombre}}</p>
+        </div>
+        <img class="AgregarHosp col-4 text-center" (click)="AddHospital()" src="../../assets/img/AgregarHosp.jpg">
+       </div>
+    </div>
+    <div class="col-md-6" bis_skin_checked="1">
+      <button (click)="ListarDoctores()" class="btn btn-info btn-lg btn-block" >Doctores</button><br><br>
+      <button (click)="ListarPacientes()" class="btn btn-info btn-lg btn-block">Pacientes</button><br><br>
+      <button (click)="ListarEspecialidades()" class="btn btn-info btn-lg btn-block">Especialidades</button><br><br>
+      <button (click)="ListarHospitales()" class="btn btn-info btn-lg btn-block">Hospitales</button><br><br>
+      <button (click)="ListarNotas()" class="btn btn-info btn-lg btn-block">Notas</button>
+
+    </div>
+  </div>
+  <!-- Footer -->
+  <!--   <footer class="blog-footer">
+      Desarrollado por Giancarlo Pasquale para Digital Harbor&nbsp;
+      <a href="https://github.com/" target="_blank" rel="noopener"> Give our repo.</a>
+  </footer> -->
+
+</div>
+<router-outlet></router-outlet>

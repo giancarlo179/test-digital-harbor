@@ -1,0 +1,43 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Agregar nota de visita</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Nombre del Paciente:</label>
+          <select class="custom-select" [(ngModel)]="notas.paciente" name="paciente">
+            <option selected>Seleccionar Paciente</option>
+            <option value="{{Paciente.nombre}}" *ngFor="let Paciente of paciente">{{Paciente.nombre}}</option>
+            <option value="Null">----</option>
+            <option value="Null">Ninguna</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Nombre del Doctor:</label>
+          <select class="custom-select" [(ngModel)]="notas.doctor" name="doctor">
+            <option selected>Seleccionar Doctor</option>
+            <option value="{{Doctor.nombre}}" *ngFor="let Doctor of doctor">{{Doctor.nombre}}</option>
+            <option value="Null">----</option>
+            <option value="Null">Ninguna</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Descripcion:</label>
+          <textarea type="text" class="form-control" id="descripcion" [(ngModel)]="notas.descripcion" name="descripcion" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <p id="fechaCreacion" ngDefaultControl  [(ngModel)]="notas.fechaCreacion" name="fechaCreacion"></p>
+        </div>
+        <div class="form-group">
+          <label for="" >Fecha de visita</label>
+            <input class="form-control" type="date" id="fechaVisita" [(ngModel)]="notas.fechaVisita" name="fechaVisita" required>
+        </div>
+        <button class="btn btn-danger" (click)="GuardarN()">Guardar</button>
+        <button class="btn btn-outline-danger" routerLink="/">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a href="https://www.digitalharbor.com" data-name="Logo">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="../assets/img/DigitalHarborIcon.png"
+    />
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <p class="nav-link">Welcome {{"User"}}</p>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" (click)="home()">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="AddHospital()">Crear Hospital</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="AddDoctor()">Crear Doctor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="AddPaciente()">Crear Paciente</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="AddEspecialidad()">Crear Especialidad</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="AddNotas()">Crear Nota</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <!-- <div class="spacer"></div> -->
+    <a style="margin-left: 10px;" aria-label="Project on Github" target="_blank" rel="noopener" href="https://github.com/" title="Github">
+      <img src="../assets/img/gitIcon.png" id="git-logo" height="24" data-name="Logo" viewBox="0 0 400 400">
+    </a>
+  </div>
+</nav>
+<router-outlet></router-outlet>

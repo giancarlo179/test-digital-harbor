@@ -1,0 +1,47 @@
+<div class="container" >
+  <div class="car">
+    <div class="class-header">
+      <h3 class="font-weight-bold">
+        Doctores
+        <button class="btn btn-outline-info" (click)="AddDoctor()">Agregar</button>
+        <button class="btn btn-outline-danger" (click)="close()" >Cerrar</button>
+      </h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Foto de Perfil</th>
+            <th>Fecha de Creacion</th>
+            <th>Especialidad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Doctor of doctor"  class="text-center">
+            <!-- Aqui va los datos del backend -->
+            <td>{{ Doctor.id }}</td>
+            <td>{{ Doctor.nombre }}</td>
+            <td>{{ Doctor.apellidos }}</td>
+            <td>{{ Doctor.fechaNacimiento }}</td>
+            <td>{{ Doctor.direccion }}</td>
+            <td>{{ Doctor.telefono }}</td>
+            <td><img class="fotoPerfil" src="../../../assets/img/{{Doctor.fotoPerfil}}" alt="Perfil"></td>
+            <td>{{ Doctor.fechaCreacion }}</td>
+            <td>{{Doctor.especialidad}}</td>
+            <td>
+              <button class="btn btn-warning" (click)="Editar(Doctor)">Editar</button>
+              <button class="btn btn-danger" (click)="Eliminar(Doctor)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

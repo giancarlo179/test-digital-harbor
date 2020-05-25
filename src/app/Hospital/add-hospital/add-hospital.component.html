@@ -1,0 +1,94 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Agregar Hospital</h3>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="AddForm">
+        <div class="form-group">
+          <label for="">Nombre del Hospital:</label>
+          <input formControlName="nombre" type="text" class="form-control"  id="nombre" name="nombre" required>
+        </div>
+        <div class="validation-error">
+          <ng-container *ngFor= 'let validation of validation_messages.nombre'>
+            <div class="validacion" *ngIf=
+              "(AddForm.get('nombre').hasError(validation.type) && AddForm.get('nombre').dirty) || (AddForm.get('nombre').touched &&
+              AddForm.get('nombre').hasError(validation.type))
+              "
+            >
+              {{ validation.message }}
+
+            </div>
+          </ng-container>
+        </div>
+        <div class="form-group">
+          <label for="">Descripcion:</label>
+          <input formControlName="descripcion" type="text" class="form-control" id="descripcion"  name="descripcion" required>
+        </div>
+        <div class="validation-error">
+          <ng-container *ngFor= 'let validation of validation_messages.descripcion'>
+            <div class="validacion" *ngIf=
+              "(AddForm.get('descripcion').hasError(validation.type) && AddForm.get('descripcion').dirty) || (AddForm.get('descripcion').touched &&
+              AddForm.get('descripcion').hasError(validation.type))
+              "
+            >
+              {{ validation.message }}
+
+            </div>
+          </ng-container>
+        </div>
+        <div class="form-group">
+          <label for="">Direccion:</label>
+          <input formControlName="direccion" type="text" class="form-control" id="direccion"  name="direccion" required>
+          <p formControlName="fechaCreacion" id="fechaCreacion" ngDefaultControl name="fechaCreacion"></p>
+        </div>
+        <div class="validation-error">
+          <ng-container *ngFor= 'let validation of validation_messages.direccion'>
+            <div class="validacion" *ngIf=
+              "(AddForm.get('direccion').hasError(validation.type) && AddForm.get('direccion').dirty) || (AddForm.get('direccion').touched &&
+              AddForm.get('direccion').hasError(validation.type))
+              "
+            >
+              {{ validation.message }}
+
+            </div>
+          </ng-container>
+        </div>
+        <div class="form-group">
+          <label for="">Telefono:</label>
+          <input formControlName="telefono" type="text" class="form-control" id="telefono" name="telefono" required>
+        </div>
+        <div class="validation-error">
+          <ng-container *ngFor= 'let validation of validation_messages.telefono'>
+            <div class="validacion" *ngIf=
+              "(AddForm.get('telefono').hasError(validation.type) && AddForm.get('telefono').dirty) || (AddForm.get('telefono').touched &&
+              AddForm.get('telefono').hasError(validation.type))
+              "
+            >
+              {{ validation.message }}
+
+            </div>
+          </ng-container>
+        </div>
+        <div class="form-group">
+          <label for="">Ciudad:</label>
+          <input formControlName="ciudad" type="text" class="form-control" id="ciudad" name="ciudad" required>
+        </div>
+        <div class="validation-error">
+          <ng-container *ngFor= 'let validation of validation_messages.ciudad'>
+            <div class="validacion" *ngIf=
+              "(AddForm.get('ciudad').hasError(validation.type) && AddForm.get('ciudad').dirty) || (AddForm.get('ciudad').touched &&
+              AddForm.get('ciudad').hasError(validation.type))
+              "
+            >
+              {{ validation.message }}
+
+            </div>
+          </ng-container>
+        </div>
+        <button [disabled]="AddForm.invalid" class="btn btn-info" (click)="GuardarH(AddForm.value)" > Guardar </button>
+        <button class="btn btn-outline-danger" routerLink="/home">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

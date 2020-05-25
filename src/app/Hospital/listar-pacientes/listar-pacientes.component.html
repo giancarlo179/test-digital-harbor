@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="font-weight-bold">
+        Pacientes
+        <button class="btn btn-outline-info" (click)="AddPaciente()">Agregar</button>
+        <button class="btn btn-outline-danger" (click)="close()" >Cerrar</button>
+      </h3>
+  </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Foto de Perfil</th>
+            <th>Fecha de Creacion</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Pacientes of paciente" class="text-center">
+            <!-- Aqui va los datos del backend -->
+            <td>{{ Pacientes.id }}</td>
+            <td>{{ Pacientes.nombre }}</td>
+            <td>{{ Pacientes.apellidos }}</td>
+            <td>{{ Pacientes.fechaNacimiento }}</td>
+            <td>{{ Pacientes.direccion }}</td>
+            <td>{{ Pacientes.telefono }}</td>
+            <td><img class="fotoPerfil" src="../../../assets/img/{{Pacientes.fotoPerfil}}" alt="Perfil"></td>
+            <td>{{ Pacientes.fechaCreacion }}</td>
+            <td>
+              <button class="btn btn-warning" (click)="EditarPacientes(Pacientes)">Editar</button>
+              <button class="btn btn-danger" (click)="Eliminar(Pacientes)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
